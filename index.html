@@ -163,14 +163,48 @@ console.log(ReactDOM);
 // );
 
 //3. React.Fragment
+// ReactDOM.render(
+//   React.createElement(
+//     React.Fragment,
+//     null,
+//     `type 이 "React Fragment" 입니다.`,
+//     `type 이 "React Fragment" 입니다.`,
+//     `type 이 "React Fragment" 입니다.`
+//   ),
+//   document.querySelector('#root')
+// )
+
+// 4. 복잡한 리액트 엘리먼트 모임
+// <h1>안녕하세요</h1>
+    // <div>
+    //   <div>
+    //     <h1>주제</h1>
+    //     <ul>
+    //       <li>React</li>
+    //       <li>Vue</li>
+    //     </ul>
+    //   </div>
+    // </div>
+
 ReactDOM.render(
   React.createElement(
-    React.Fragment,
-    null,
-    `type 이 "React Fragment" 입니다.`
-  ),
+    'div', 
+    null, 
+    React.createElement(
+      'div',
+       null, 
+       React.createElement('h1', null, '주제'),
+       React.createElement(
+         'ul', 
+         null, 
+         React.createElement('li', null, 'React'),
+         React.createElement('li', null, 'vue')
+       )
+      )
+    ),
   document.querySelector('#root')
 )
 </script>
-</body>
+
+</body> 
 </html>
