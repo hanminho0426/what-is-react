@@ -38,7 +38,7 @@
     crossorigin 
     src="https://unpkg.com/react-dom@17/umd/react-dom.development.js">
   </script>
-  <!-- <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script> -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   
 
   <!-- <script type="text/javascript"> 
@@ -131,7 +131,7 @@ const FunctionComponent = () => <div>Hello</div>;
 ReactDOM.render(<FunctionComponent/>,document.querySelector('#root'))
 </script> -->
 
-<script type="text/javascript">
+<script type="text/babel">
 console.log(React);
 console.log(ReactDOM); 
 
@@ -186,25 +186,44 @@ console.log(ReactDOM);
     //   </div>
     // </div>
 
+    // 우리가 작성한 어떤 코드 => 순수하게 실행할 수 있는 자바스크립트
+    // babel
+
+// ReactDOM.render(
+//   React.createElement(
+//     'div', 
+//     null, 
+//     React.createElement(
+//       'div',
+//        null, 
+//        React.createElement('h1', null, '주제'),
+//        React.createElement(
+//          'ul', 
+//          null, 
+//          React.createElement('li', null, 'React'),
+//          React.createElement('li', null, 'vue')
+//        )
+//       )
+//     ),
+//   document.querySelector('#root')
+// )
+
 ReactDOM.render(
-  React.createElement(
-    'div', 
-    null, 
-    React.createElement(
-      'div',
-       null, 
-       React.createElement('h1', null, '주제'),
-       React.createElement(
-         'ul', 
-         null, 
-         React.createElement('li', null, 'React'),
-         React.createElement('li', null, 'vue')
-       )
-      )
-    ),
+   <div>
+      <div>
+        <h1>주제</h1>
+        <ul>
+          <li>React</li>
+          <li>Vue</li>
+        </ul>
+      </div>
+    </div>,
   document.querySelector('#root')
-)
+);
+
 </script>
+
+
 
 </body> 
 </html>
