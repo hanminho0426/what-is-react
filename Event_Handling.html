@@ -20,8 +20,8 @@
 <div id="root"></div>
 
 <script type="text/babel">
-  console.log(React);
-  console.log(ReactDOM);
+  // console.log(React);
+  // console.log(ReactDOM);
 
   // function Component() {
   // return (
@@ -37,35 +37,35 @@
   //   );
   // };
 
-  class Component extends React.Component {
-    state = {
-      count: 0,
-    };
+  // class Component extends React.Component {
+  //   state = {
+  //     count: 0,
+  //   };
     // constructor(props){
     //   super(props);
 
     //   this.click = this.click.bind(this);
     // }
   
-    render() {
-      return (
-        <div>
-          <p>{this.state.count}</p>
-          <button onClick={this.click}>클릭</button>
-        </div> 
-        );
-      }
+//     render() {
+//       return (
+//         <div>
+//           <p>{this.state.count}</p>
+//           <button onClick={this.click}>클릭</button>
+//         </div> 
+//         );
+//       }
  
-      click = () => {
-        console.log("clicked");
-          this.setState((state) => ({
-            ...state, 
-            count: state.count + 1,
-        }));
-      }
-    }
+//       click = () => {
+//         console.log("clicked");
+//           this.setState((state) => ({
+//             ...state, 
+//             count: state.count + 1,
+//         }));
+//       }
+//     }
 
-  ReactDOM.render(<Component/>, document.querySelector("#root"));
+//   ReactDOM.render(<Component/>, document.querySelector("#root"));
 
 </script>
 </body>
